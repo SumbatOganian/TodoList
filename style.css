@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 85rem;
+    padding: 1rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.Hero {
+    position: relative;
+    background: rgb(27, 28, 107);
+    height: 40rem;
+}
+
+.Hero .container{
+    /* background: url('Images/1078.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.Hero_img {
+    position: absolute;
+    left: 0;
+    top: 2rem;
+}
+
+.Hero_text_wrapper {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-overflow: scroll;
+    
+}
+
+.Hero h1 {
+    color: white;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    
+}
+
+.Hero_description {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.logo_title_wrapper {
+    margin-left: 1.5rem;
+    margin-top: 0.2rem;
+}
+
+.logo_title {
+    font-size: 1.2rem;
+    color: white;
+    
+}
+
+.logo_title_designed {
+    display: inline-block;
+    color: #f76e8c;
+    font-size: 1.5rem;
+    transform: rotate(20deg);
+}
+
+.header_list {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.header_list a {
+    color: white;
+    font-size: 1.2rem;
+    transition: all .5s;
+}
+
+.header_list a:hover {
+    display: inline-block;
+    color: #F64C72;
+    transform: rotate(10deg);
+}
+
+.Hero_btn {
+    font-family:"Poppins", sans-serif;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 9rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    border: none;
+    color: white;
+    background: #F64C72;
+    letter-spacing: 1.5px;
+    box-shadow: 5px 10px 10px rgba(246, 76, 114, 0.4);
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.Hero_btn:hover {
+    transform: translate(-50%, -50%);
+    scale: 1.1;
+    box-shadow: 10px 15px 15px rgba(246, 76, 114, 0.3);
+}
+
+.Hero_btn:active {
+    opacity: 0.7;
+}
+
+.Hero_btn:focus {
+    opacity: 0.7;
+}
+
+.inputForm {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mainInput {
+    display: none;
+    width: 20rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    padding: 15px;
+    border: none;
+    
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+
+    box-shadow: 5px 2px 15px white;
+    transition: all 0.5s;
+}
+
+.mainInput:focus {
+    outline: none;
+}
+
+.addBtn {
+    display: none;
+
+    font-family: "Poppins", sans-serif;
+    position: absolute;
+
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 6rem;
+    height: 2.5rem;
+
+    text-transform: uppercase;
+
+    background: rgb(255, 255, 255);
+    color: #F64C72;
+
+    font-weight: 600;
+
+    font-size: 20px;
+
+    border-radius: 10px;
+    border: none;
+
+    cursor: pointer;
+
+    transition: all 0.5s;
+}
+
+.addBtn:hover {
+    border: 5px solid #f76e8c;
+}
+
+.addBtn:focus {
+    outline: none;
+    border: 5px solid #f76e8c;
+}
+
+.addBtn:active {
+    opacity: 0.8;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row: auto;
+    gap: 10px;
+}
+
+.card {
+    position: relative;
+    visibility: hidden;
+    width: 20rem;
+    height: 20rem;
+    /* border: 5px solid #F64C72;; */
+    /* border-radius: 10px; */
+
+    background: rgb(27, 28, 107);
+    color: white;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 72px;
+        height: 72px;
+        background: linear-gradient(315deg, transparent 50%, rgba(0,0,0,0.2) 50%);
+        border-radius: 0 0 10px 0;
+    }
+
+.card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 72px;
+    height: 72px;
+    background: white;
+
+}
+
+.decorate_nail {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.tasks {
+
+    width: 80%;
+    height: 80%;
+    padding: 1px;
+
+    font-size: 30px;
+
+    overflow-y: auto;
+   
+    word-wrap: break-word;
+    word-break: break-word;
+    text-align: center;
+}
